@@ -7,25 +7,36 @@
 body {
     font-family: 'Lato', sans-serif;
     background-color: #111111;
+    overflow: hidden;
 }
-/*HEADER*/
-header {
-    justify-content: space-between;
-    padding: 5px 0;
-    background-color:inherit;
-    align-items: center;
+/*COMMON*/
+.fa-solid.fa-shield-dog, #btn-screen .fa-solid.fa-arrow-up-from-bracket, #btn-screen .fa-chevron-up, #btn-screen {
+    color: #67d669;
 }
-header, .header-left, .btn-header {
-    display: flex;
+header .fa-solid, .btn, .btn.end-call {
+    color: #fff;
+    margin: 0 5px;
+}
+.btn-header .fa-solid.fa-compact-disc, .fa-solid.fa-microphone-slash {
+    color: #a8352e;
 }
 .btn {
     border-radius: 5px;
     border: none;
     padding: 5px;
 }
-header .fa-solid, .btn, .btn.end-call {
-    color: #fff;
-    margin: 0 5px;
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    background-color:inherit;
+    align-items: center;
+    height: 2em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .btn-header {
     background-color: #000;
@@ -33,26 +44,32 @@ header .fa-solid, .btn, .btn.end-call {
 }
 /*MAIN*/
 main {
-    overflow: auto;
+    display: flex;
+    position: fixed;
+    top: 2em;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 6em);
+    overflow-y: auto;
 }
 .main-container {
     display: flex;
     width: 90%;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
     gap: 10px;
     padding: 20px 0;
 }
-.user-name {
+.user-name-box {
     width: calc(90% / 6);
     position: relative;
 }
-.user-name img {
+.user-name-box img {
     width: 100%;
     border-radius: 5px;
 }
-.user-name span {
+.user-name-box span {
     position: absolute;
     bottom: 5px;
     left: 5px;
@@ -60,43 +77,42 @@ main {
     color: #fff;
     padding: 2px 5px;
     border-radius: 5px;
-
+    font-size: 12px;
 }
-
 /*FOOTER*/
 footer {
     background-color: #1b1b1b;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 4em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 footer .fa-solid {
     font-size: 20px;
-    color: #a8a8a8;
+    padding: 0 5px;
 }
 footer button {
     background-color: inherit;
+}
+.footer.action div, .footer-left div, .footer-right div {
+    text-transform: capitalize;
+    text-align: justify;
+    font-size: 12px;
+    padding: 5px 0;
+}
+footer .fa-chevron-up {
+    font-size: 10px;
+    margin-left: 10px;
+}
+footer .btn, footer .btn .fa-solid {
     color: #a8a8a8;
-
 }
 .end-call {
     background-color: #a8352e;
     padding: 5px 10px;
-    display: inline-block;
-}
-footer div {
-    text-transform: capitalize;
-    text-align: justify;
-}
-footer .fa-chevron-up {
-    font-size: 10px;
-}
-footer .btn {
-    color: #a8a8a8;
-}
-footer .fa-solid {
-    margin: 5px 5px;
-}
-footer .fa-chevron-up {
-    margin-left: 20px;
+    font-size: 12px;
 }
