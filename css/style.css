@@ -13,6 +13,7 @@ header {
     justify-content: space-between;
     padding: 5px 0;
     background-color:inherit;
+    align-items: center;
 }
 header, .header-left, .btn-header {
     display: flex;
@@ -22,16 +23,18 @@ header, .header-left, .btn-header {
     border: none;
     padding: 5px;
 }
-.fa-solid, .btn {
+header .fa-solid, .btn, .btn.end-call {
     color: #fff;
     margin: 0 5px;
 }
 .btn-header {
     background-color: #000;
-    align-items: center;
     column-gap: 15px;
 }
 /*MAIN*/
+main {
+    overflow: auto;
+}
 .main-container {
     display: flex;
     width: 90%;
@@ -41,7 +44,59 @@ header, .header-left, .btn-header {
     gap: 10px;
     padding: 20px 0;
 }
-.main-container img {
+.user-name {
     width: calc(90% / 6);
+    position: relative;
+}
+.user-name img {
+    width: 100%;
     border-radius: 5px;
+}
+.user-name span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+
+}
+
+/*FOOTER*/
+footer {
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .fa-solid {
+    font-size: 20px;
+    color: #a8a8a8;
+}
+footer button {
+    background-color: inherit;
+    color: #a8a8a8;
+
+}
+.end-call {
+    background-color: #a8352e;
+    padding: 5px 10px;
+    display: inline-block;
+}
+footer div {
+    text-transform: capitalize;
+    text-align: justify;
+}
+footer .fa-chevron-up {
+    font-size: 10px;
+}
+footer .btn {
+    color: #a8a8a8;
+}
+footer .fa-solid {
+    margin: 5px 5px;
+}
+footer .fa-chevron-up {
+    margin-left: 20px;
 }
